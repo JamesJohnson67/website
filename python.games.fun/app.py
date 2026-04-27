@@ -1,0 +1,15 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/")
+def bob():
+    return render_template("red pandas.html")
+@app.route("/projects/score-clicker")
+def score_clicker():
+    return render_template("score_clicker.html")
+if __name__ == "__main__":
+    app.run(debug=False)
